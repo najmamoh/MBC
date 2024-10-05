@@ -206,7 +206,6 @@
     }
 
 }
-
 .nav-bar .navbar {
     z-index: 9;
 }
@@ -240,7 +239,9 @@
 .navbar-light .navbar-nav .nav-item.active .nav-link {
     color: var(--bs-primary);
 }
-
+.navbar-nav{
+    margin-top: -20px;
+}
 @media (max-width: 991px) {
     .navbar {
         padding: 20px 0;
@@ -1024,4 +1025,11 @@
 .logoo{
     width: 10rem;
     margin-top: 5%;
+}
+.Sabah {
+padding-bottom: 5rem;
+}
+.h1{
+    text-align: center;
+    padding: 10px;
 }
