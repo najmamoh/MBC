@@ -239,7 +239,10 @@
 .navbar-light .navbar-nav .nav-item.active .nav-link {
     color: var(--bs-primary);
 }
-
+.navbar-nav{
+    margin-top: -20px;
+    
+}
 @media (max-width: 991px) {
     .navbar {
         padding: 20px 0;
