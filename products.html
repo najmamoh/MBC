@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Products</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="PRODUCTS" class="container-fluid blog py-5">
+        <div class="container py-5">
+            <div class="d-flex flex-column mx-auto text-center mb-5">
+                <h2 class="text-primary">OUR PRODUCTS</h2>
+            </div>
+
+            <div class="row g-4" id="product-container">
+                <!-- Products will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const products = [
+           { id: 1, name: "PPR Pipes & Fittings", type: "Pipes", price: 15, quantity: 100, dis:"Durable, high-quality PPR pipes and fittings, ideal for hot and cold water supply systems.",imgSrc: "http://5.imimg.com/data5/SELLER/Default/2024/4/411921630/LM/HD/NC/9892184/ppr-pipe-and-fitting-1000x1000.jpg" },,
+           { id: 2, name: "PVC Pipes & Fittings", type: "Pipes", price: 15, quantity: 100, dis:"Lightweight and corrosion-resistant PVC pipes for plumbing, drainage, and irrigation systems.",imgSrc: "http://5.imimg.com/data5/SELLER/Default/2024/4/412053268/EQ/TW/KG/111779/pvc-pipes-fittings-1000x1000.jpg" },,
+           { id: 3, name: "uPVC Pipes & Fittings", type: "Pipes", price: 15, quantity: 100, dis:"Robust and long-lasting uPVC pipes for use in pressure systems, offering excellent chemical resistance.",imgSrc: "http://4.imimg.com/data4/KE/AM/MY-1706593/upvc-pipe-fittings-500x500.jpg" },,
+           { id: 4, name: "HDPE Pipes", type: "Pipes", price: 15, quantity: 100, dis:"Flexible and strong HDPE pipes, perfect for water supply, gas lines, and sewer applications.",imgSrc: "http://4.imimg.com/data4/EK/KG/MY-1706593/hdpe-pipes-500x500.jpg" },,
+ 
+           
+            { id: 5, name: "Toilets", type: "Sanitary Ware", price: 5, quantity: 300, dis:"Premium quality toilets designed for comfort, efficiency, and durability, offering sleek designs that complement any bathroom decor..",imgSrc: "img/Picsart_24-10-14_09-43-16-348.png" },
+            { id: 6, name: "Wash Basinl", type: "Sanitary Ware", price: 150, quantity: 200,dis:"Stylish wash basins with a variety of modern and classic designs, crafted to suit any bathroom layout.", imgSrc: "img/Picsart_24-10-14_09-42-54-821.png" },
+            { id: 7, name: "Bathroom Cabinets", type: "Sanitary Ware", price: 150, quantity: 200, dis:"Elegant and functional cabinets that provide ample storage while enhancing the look of your bathroom.",imgSrc: "img/images (2).jpeg" },
+            { id: 8, name: "Faucets", type: "Sanitary Ware", price: 150, quantity: 200,dis:"High-quality faucets with modern and traditional designs, ensuring water efficiency and lasting performance.", imgSrc: "img/Picsart_24-10-15_11-05-28-810.png" },
+            { id: 9, name: "Showers", type: "Sanitary Ware", price: 150, quantity: 200, dis:"A wide selection of showers offering superior performance, from rain showerheads to multi-spray options.", imgSrc: "img/Picsart_24-10-15_09-47-31-640.png" },
+            { id: 10, name: "Other Fittings", type: "Sanitary Ware", price: 150, quantity: 200,dis:"Comprehensive fittings including towel racks, hooks, and other essential bathroom accessories for a complete finish" ,imgSrc: "img/images (2).jpeg" },
+
+
+            { id: 11, name: "Steel Doors (Exterior)", type: "Doors", price: 150, quantity: 200, dis:"Strong and secure steel doors designed for maximum protection while maintaining a modern aesthetic.",imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSykRMgvrUkY5u7muTOdci69XiNI5WXxKSOiA&s" },
+            { id: 12, name: "PVC Doors (Interior)", type: "Doors", price: 150, quantity: 200,dis:"Lightweight and cost-effective PVC doors, offering durability and easy maintenance for indoor use.", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwNJEz14HGwQT5ojP6dnkjhFSqvyNxMLCOYQ&s" },
+            { id: 13, name: "WPC Doors (Interior)", type: "Doors", price: 150, quantity: 200, dis:"High-quality, eco-friendly WPC doors that combine wood and plastic for a sleek and durable finish, ideal for interior applications.", imgSrc: "data:image/jpeg;base64,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" },
+
+
+            { id: 14, name: "Bitumen Membrane", type: "Waterproofing Products", price: 150, quantity: 200, dis:"Reliable bitumen membranes for waterproofing roofs and foundations, ensuring long-term protection.",imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-AmW-ni_QrdFoAl_Xk2S8Etmt9UAuJOHoLg&s" },
+            { id: 15, name: "Cementitious Coating", type: "Waterproofing Products", price: 150, quantity: 200,dis:"High-performance coatings that provide waterproofing for concrete and masonry surfaces.", imgSrc: "https://static.asianpaints.com/content/dam/asian_paints/blog/waterproofing/smartcare-damproof/what-is-cementitious-waterproofing/cementitious-waterproofing-material.jpg" },
+            { id: 16, name: "Polythene Sheets", type: "Waterproofing Products", price: 150, quantity: 200, dis:"Durable polythene sheets used for general waterproofing and moisture barriers in construction.", imgSrc: "https://www.polyfast.co.uk/cdn/shop/products/CLEAR_250_MICRON.jpg?v=1490351137" },
+            { id: 16, name: "Cold Applied Bitumen Emulsion", type: "Waterproofing Products", price: 150, quantity: 200, dis:"Easy-to-apply bitumen emulsion for effective waterproofing in various applications.", imgSrc: "https://infinitygalaxy.org/wp-content/uploads/2022/10/painting-bitumen.jpg" },
+
+
+
+            { id: 17, name: "Black Bailing Wire", type:"Nails", price: 150, quantity: 200, dis:"Strong and durable wire for tying and bundling in agricultural and construction settings.",imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJt5vT8-8RNAT-0LayvwS4xxlKauxyHHg0lg&s" },
+            { id: 18, name: "Galvanized Wire", type:"Nails", price: 150, quantity: 200,dis:"Corrosion-resistant wire suitable for fencing, construction, and industrial applications.", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOf9s6pYRXxGSHBgThL0ACmNf3NfJtgLu-KA&s" },
+            { id: 19, name: "Razor Wire", type:"Nails", price: 150, quantity: 200, dis:"High-security razor wire for perimeter fencing, offering maximum protection against intruders.", imgSrc: "https://images.thdstatic.com/productImages/f5f5549c-6f0a-4fa0-8ddb-935cbf82075f/svn/silver-vevor-garden-fencing-5pcs15mjssw000001v0-64_600.jpg" },
+            { id: 20, name: "Chicken Mesh Wire", type:"Nails", price: 150, quantity: 200, dis:"Lightweight mesh wire commonly used in poultry farming, fencing, and general construction.", imgSrc: "https://www.sure-green.com/media/catalog/product/cache/c06f5cbddc581ce0be0fd547115ea21f/e/v/everbilt-chicken-wire-308432eb-64_1000.jpg" },
+
+
+            { id: 21, name: "MDF (12mm, 15mm, 18mm)", type:"Wood", price: 150, quantity: 200, dis:"Smooth and versatile MDF sheets in various thicknesses, ideal for cabinetry, furniture, and interior projects.",imgSrc: "img/images (8).jpeg" },
+            { id: 22, name: "Plywood (6mm, 9mm, 12mm, 15mm, 18mm)", type:"Wood", price: 150, quantity: 200,dis:"Durable plywood sheets available in multiple sizes for general construction, furniture, and paneling.", imgSrc: "https://mdfdirect.co.uk/wp-content/uploads/2022/07/Birch-Plywood.png" },
+            { id: 23, name: "Whitewood (1”, 2”)", type:"Wood", price: 150, quantity: 200, dis:"Quality whitewood lumber in 1” and 2” thicknesses, suitable for framing, carpentry, and general construction.", imgSrc: "https://danubebuildingmaterials.com/wp-content/uploads/2022/09/Whitewood-Bundle.webp" },
+
+
+
+            { id: 24, name: "Gypsum Powder", type:"Gypsum Products", price: 150, quantity: 200, dis:"High-quality gypsum powder for plastering and finishing walls, ensuring smooth surfaces.",imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzAIXhMduiOLnWI4FLBg57GPtKya_iLwCK1Q&s" },
+            { id: 25, name: "Gypsum Board", type:"Gypsum Products", price: 150, quantity: 200,dis:"Versatile gypsum boards used for partition walls, ceilings, and interior designs.", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPoIQD0oIMGhzKKnz7Y1510aHcGbGt7IV8fQ&s" },
+            { id: 26, name: "Gypsum Tiles", type:"Gypsum Products", price: 150, quantity: 200, dis:"Lightweight gypsum tiles perfect for ceilings, offering sound absorption and fire resistance.", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9i4-kF_BPLoyy_dSgai78mkvDp5IhvywOIA&s" },
+            { id: 27, name: "Gypsum Joint Compound", type:"Gypsum Products", price: 150, quantity: 200, dis:"Easy-to-apply joint compound for sealing gaps and joints in gypsum board installations.", imgSrc: "https://www.sinokem.com/wp-content/uploads/2016/04/Gypsum-joint-compound.jpg" },
+
+
+            { id: 24, name: "Tile Adhesive", type:"Other Specialized Products", price: 150, quantity: 200, dis:"reliable adhesives for securely fixing ceramic and porcelain tiles to walls and floors.",imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6LrSw3vR9chTKfG0mrHZZYPmL6Sj1HZMOng&s" },
+            { id: 25, name: "Tile Grout", type:"Other Specialized Products", price: 150, quantity: 200,dis:"Premium tile grout for sealing gaps between tiles, ensuring a clean and professional finish.", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoLurdXyOMGpAWKIUhmv943S96Gf9ClBCwqQ&s" },
+            { id: 26, name: "Floor Epoxy", type:"Other Specialized Products", price: 150, quantity: 200, dis:"High-performance epoxy coatings designed for durable and attractive flooring solutions.", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTozqFfYckugjnr-I4gbSMh7q6p-cRCXoFcFg&s" },
+            { id: 27, name: "Concrete Admixture", type:"Other Specialized Products", price: 150, quantity: 200, dis:"Quality admixtures to improve the performance of concrete in strength, workability, and durability.", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrH4SZgF5MAn0ttbl7og6fgcN-nRaTPQ1djQ&s" },
+            { id: 27, name: "Joint Fillers", type:"Other Specialized Products", price: 150, quantity: 200, dis:"Effective joint fillers for sealing gaps and ensuring durability in construction projects.", imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNyb7xpoVgoWrXyKuAfBLwXVb-5TK4BlglrA&s" },
+
+            // Add more products as needed
+        ];
+
+        function getProductsByType(type) {
+            return products.filter(product => product.type === type);
+        }
+
+        function displayProducts() {
+            // Get the selected product type from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productType = urlParams.get('type');
+
+            // Filter products by the selected type
+            const filteredProducts = getProductsByType(productType);
+
+            const container = document.getElementById('product-container');
+            container.innerHTML = ''; // Clear previous products
+
+            if (filteredProducts.length === 0) {
+                container.innerHTML = '<p class="text-center">No products found for this category.</p>';
+                return;
+            }
+
+            // Loop through filtered products and display them
+            
+            filteredProducts.forEach(product => {
+                const productItem = document.createElement('div');
+                productItem.className = 'col-lg-4 wow fadeInUp ';
+                productItem.innerHTML = `
+
+                                       <div class="blog-item">
+
+                            <div class="blog-img">
+                                <img src="${product.imgSrc} " class="img-fluid w-100 img" alt="">
+                            </div>
+                            <div class="blog-heading ms-4">
+                                <a href="#" class="h4 mb-0 p-4 btn" id="btn" type="PIPING SOLUTIONS">${product.name} </a>
+
+                            </div>
+                            <div class="blog-content bg-light p-4">
+                                <!-- <div class="d-flex justify-content-between mb-4">
+                                    <p class="mb-0 small"><i class="fa fa-calendar me-2"></i> April 2,2025</p>
+                                    <p class="mb-0 small"><i class="fa fa-tag me-2"></i> ${product.name}</p>
+                                </div> -->
+                                <p class="mb-4">${product.dis}
+                                </p>
+                                                          </div>
+                        </div>
+                    </div>
+               
+
+
+
+
+
+
+
+
+
+
+
+                  
+                `;
+                container.appendChild(productItem);
+            });
+        }
+
+        // Display products on page load
+        window.onload = displayProducts;
+    </script>
+</body>
+</html>
+
+
+
+<!-- // <div class="blog-item">
+    //     <div class="blog-img">
+    //         <img src="${product.imgSrc}" class="img-fluid w-100 img" alt="${product.name}">
+    //     </div>
+    //     <div class="blog-heading ms-4">
+    //         <a href="#" class="h4 mb-0 p-4">${product.name}</a>
+    //     </div>
+    //     <div class="blog-content bg-light p-4">
+    //         <p class="mb-4">Price: $${product.price} | Quantity: ${product.quantity}</p>
+    //     </div>
+    // </div> -->

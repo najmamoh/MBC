@@ -1,0 +1,7 @@
+[
+    { "id": 1, "name": "Cement", "type": "PIPING SOLUTIONS", "price": 15, "quantity": 100 },
+    { "id": 2, "name": "Bricks", "type": "PIPING SOLUTIONS", "price": 0.5, "quantity": 1000 },
+    { "id": 3, "name": "Steel Rod", "type": "PIPING SOLUTIONS", "price": 20, "quantity": 500 },
+    { "id": 4, "name": "Paint", "type": "PIPING SOLUTIONS", "price": 10, "quantity": 200 },
+    { "id": 5, "name": "Electrical Wire", "type": "ELECTRICAL SOLUTIONS", "price": 5, "quantity": 300 }
+]

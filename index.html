@@ -28,7 +28,19 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
     </head>
-
+    <!-- <script>
+        function filterProducts(type) {
+            const products = document.querySelectorAll('.product-item');
+            products.forEach(product => {
+                const productType = product.getAttribute('data-type');
+                if (type === '' || productType === type) {
+                    product.style.display = 'block';  // Show the product
+                } else {
+                    product.style.display = 'none';   // Hide other products
+                }
+            });
+        }
+    </script> -->
     <body>
 
         <!-- Spinner Start -->
@@ -58,10 +70,12 @@
                             <div class="col-lg-8 text-center text-lg-center mb-lg-0">
                                 <div class="d-flex flex-wrap">
                                     <div class="border-end border-primary pe-3">
-                                        <a href="#" class="text-muted small"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
-                                    </div>
+                                        <a href="https://www.google.com/maps" target="_blank" class="text-muted small">
+                                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                            Find A Location
+                                          </a>                                    </div>
                                     <div class="ps-3">
-                                        <a href="mailto:example@gmail.com" class="text-muted small"><i class="fas fa-envelope text-primary me-2"></i>example@gmail.com</a>
+                                        <a href="mailto:example@gmail.com" class="text-muted small"><i class="fas fa-envelope text-primary me-2"></i>info@sabahmaterials.com</a>
                                     </div>
                                 </div>
                             </div>
@@ -73,16 +87,7 @@
                                         <a class="btn p-0 text-primary me-3" href="https://www.instagram.com/sabahbmltd"><i class="fab fa-instagram"></i></a>
                                         <a class="btn p-0 text-primary me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
                                     </div>
-                                    <!-- <div class="dropdown ms-3">
-                                        <a href="#" class="dropdown-toggle text-white" data-bs-toggle="dropdown"><small class="text-body"><i class="fas fa-globe-europe text-primary me-2"></i> English</small></a>
-                                        <div class="dropdown-menu">
-                                            <a href="#" class="dropdown-item">English</a>
-                                            <a href="#" class="dropdown-item">Bangla</a>
-                                            <a href="#" class="dropdown-item">French</a>
-                                            <a href="#" class="dropdown-item">Spanish</a>
-                                            <a href="#" class="dropdown-item">Arabic</a>
-                                        </div>
-                                    </div> -->
+                                  
                                 </div>
                             </div>
                         </div>
@@ -91,7 +96,6 @@
                         <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-lg-end">
                             <a href="#" class="navbar-brand-2">
                                 <h1 class="text-primary mb-0"></i> SBM</h1>
-                                <!-- <img src="img/logo.png" alt="Logo"> -->
                             </a>  
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                                 <span class="fa fa-bars"></span>
@@ -99,20 +103,34 @@
                             <div class="collapse navbar-collapse" id="navbarCollapse">
                                 <div class="navbar-nav mx-0 mx-lg-auto bg-white navbar1">
                                     <a href="index.html" class="nav-item nav-link active">Home</a>
-                                    <a href="#About" class="nav-item nav-link">About</a>
-                                    <a href="#PRODUCTS" class="nav-item nav-link">Our Products</a>
-                                    <a href="#Vision & Mission" class="nav-item nav-link nv">Vision & Mission</a>
-                                    <a href="#whatwedo " class="nav-item nav-link nv">WHAT WE DO</a>
-                                    <a href="#Distinctive" class="nav-item nav-link nv">Our Distinctive Features</a>
-                                    <a href="#choose " class="nav-item nav-link nv">Why ChooseUs</a>
+                                    <div class="nav-item dropdown">
+                                        <a href="#About" class="nav-link" data-bs-toggle="dropdown">
+                                            <span class="dropdown-toggle">About</span>
+                                        </a>
+                                        <div class="dropdown-menu">
+                                            <a href="Vision.html" class="dropdown-item">Vision & Mission</a>
+                                            <a href="WHAT WE DO.html" class="dropdown-item">WHAT WE DO</a>
+                                           
+                                        </div>
+                                    </div>
+                                    <a href="#PRODUCTS" class="nav-item nav-link">Products</a>
 
-                                    <a href="#ourcore " class="nav-item nav-link">Our Core Values</a>
+                                    <div class="nav-item dropdown">
+                                        <a href="Services.html" class="nav-link" data-bs-toggle="dropdown">
+                                            <span class="dropdown-toggle">Services</span>
+                                        </a>
+                                        <div class="dropdown-menu">
+                                            <a href="#" class="dropdown-item">procurmenet</a>
+                                            <a href="#" class="dropdown-item">logistics</a>
+                                            <a href="why choose us.html" class="dropdown-item">why choose us</a>
+
+                                           
+                                        </div>
+                                    </div>
+
 
                                     <a href="contact.html" class="nav-item nav-link">Contact</a>
-                                    <!-- <div class="nav-btn ps-3">
-                                        <button class="btn-search btn btn-primary btn-md-square mt-2 mt-lg-0 mb-4 mb-lg-0 flex-shrink-0" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
-                                        <a href="#" class="btn btn-primary py-2 px-4 ms-0 ms-lg-3"> Get Solution</a>
-                                    </div> -->
+                                   
                                 </div>
                             </div>
                         </nav>
@@ -152,8 +170,8 @@
                         <div class="row g-4 align-items-center">
                             <div class="col-lg-7 animated fadeInLeft">
                                 <div class="text-sm-center text-md-start">
-                                    <h4 class="text-white text-uppercase fw-bold mb-4 heading">Discover the foundation of quality</h4>
-                                    <h1 class="display-2 text-white mb-4 heading">and trust with our expert building materials</h1>
+                                    <h4 class="text-white text-uppercase fw-bold mb-4 heading">Discover the foundation of quality and trust</h4>
+                                    <h1 class="display-2 text-white mb-4 heading"> with our expert building materials</h1>
                                     <p class="mb-5 fs-5 ">we are committed to providing durable solutions for all your construction needs. Experience the power of craftsmanship and reliability as we help you build with confidence and success.
 
 
@@ -234,7 +252,7 @@
                     </div>
                     <div class="col-lg-5 wow fadeInRight" data-wow-delay="0.2s">
                         <div class="position-relative h-100">
-                            <img src="img/building-materials.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="">
+                            <img src="https://img.freepik.com/premium-photo/colorful-array-industrial-pipes-fittings-construction-projects-plumbing-needs_622540-16394.jpg?w=900" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="">
                             <div class="bg-white">
                                 <div class="position-absolute pt-3 bg-white" style="width: 50%; left: 0; bottom: 0;">
                                     <div class="bg-primary p-4">
@@ -243,7 +261,7 @@
                                     </div>
                                 </div>
                                 <div class="position-absolute p-3 bg-white pb-0 pe-0" style="width: 50%; bottom: 0; right: 0;">
-                                    <img src="img/img2.jpg" class="img-fluid" alt="">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJt5vT8-8RNAT-0LayvwS4xxlKauxyHHg0lg&s" class="img-fluid" alt="">
                                 </div>
                             </div>
                         </div>
@@ -326,15 +344,12 @@
             </div>
 <!-- why you choos us? -->
 
-<div id="choose" class="container-fluid faq-section bg-light py-5">
+<!-- <div id="choose" class="container-fluid faq-section bg-light py-5">
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
-                <!-- <h4 class="text-primary">Some Important FAQ's</h4> -->
-                <!-- <h2 class="display-4 mb-4">WHY CHOOSE US?</h2> -->
                 <img src="img/images.jpeg" class="img-fluid w-100" alt="">
             </p>
-                <!-- <a class="btn btn-primary py-3 px-5" href="#">Have Any Questions</a> -->
             </div>
             <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
                 <div class="h-100">
@@ -370,7 +385,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
         <!-- Banner Start -->
          <div class="container-fluid banner py-5 wow zoomIn" data-wow-delay="0.2s">
             <div class="banner-design-1"></div>
@@ -395,7 +410,7 @@
         <!-- Banner End -->
 
 <!-- vistion -->
-
+<!-- 
 <div id="Vision & Mission" class="container-fluid testimonial bg-dark py-5">
     <div class="container py-5">
         <div class="row g-5">
@@ -442,67 +457,15 @@
                 
             </div>
         </div>
-    </div>
-    <div id="whatwedo" class="container-fluid faq-section bg-light py-5">
-        <div class="container py-0">
-            <h1 class="h1">WHAT WE DO?</h1>
-            <div class="row g-5">
-                
-                <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
-                    <div class="h-100">
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item Sabah">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        MATERIALS SUPPLY: 
-
-                                    </button>
-                                </h2>
-                                <p class="mb-0 p-4 ">Sabah Co. is best known for the supply and distribution of premium
-                                    quality building materials that are also price competitive. We strive to
-                                    bring the latest trends and reputable brands in the building materials
-                                    industry.</p>
-                            </div>
-                           
-                           
-                            
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
-                        <div class="h-100">
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            ADVISORY, PROCUREMENT & LOGISTICS:                                         </button>
-                                    </h2>
-                                    <p class="mb-0 p-4">• Sabah Co. also offers APL service for large-scale specialized projects
-                                        such as hotels, hospitals, malls, etc. We have a dedicated team
-                                        experienced in sourcing products from international manufacturing
-                                        bases across China, Europe, and the Middle East. Customers can utilize
-                                        our longstanding relationships with suppliers, and we will consult you
-                                        from sourcing to logistics arrangements and delivery..</p>
-                                </div>
-                               
-                               
-                                
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
+    </div> -->
+   
     <!--  -->
-    <div id="ourcore" class="container-fluid blog py-5">
+    <!-- <div id="ourcore" class="container-fluid blog py-5">
         <div class="container py-5">
             <div class="d-flex flex-column  mx-auto text-center mb-5 wow fadeInUp " data-wow-delay="0.2s" style="max-width: 800px;">
                 <h2 class="text-primary">OUR CORE VALUES
                 </h2>
-                <!-- <h1 class="display-4 mb-4">Electricity News & Updates</h1>
-                <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, deserunt provident ab voluptates rerum eaque eum magni autem atque in minus laboriosam corrupti deleniti voluptatibus rem reiciendis modi veniam animi?
-                </p> -->
+               
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
@@ -512,10 +475,7 @@
                             <a href="#" class="h4 mb-0 p-4">QUALITY</a>
                         </div>
                         <div class="blog-content bg-dark p-4">
-                            <!-- <div class="d-flex justify-content-between mb-4">
-                                <p class="mb-0 small"><i class="fa fa-calendar me-2"></i> April 2,2025</p>
-                                <p class="mb-0 small"><i class="fa fa-tag me-2"></i> Electricity Corner</p>
-                            </div> -->
+                           
                             <p class="mb-4">Unyielding dedication to delivering building materials of the
                                 highest standard.
                             </p>
@@ -528,11 +488,7 @@
                         <div class="blog-heading ms-4">
                             <a href="#" class="h4 mb-0  p-4">INNOVATION </a>
                         </div>
-                        <!-- <div class="blog-content bg-light p-4">
-                            <div class="d-flex justify-content-between mb-4">
-                                <p class="mb-0 small"><i class="fa fa-calendar me-2"></i> April 2,2025</p>
-                                <p class="mb-0 small"><i class="fa fa-tag me-2"></i> Electricity Corner</p>
-                            </div> -->
+                       
                             <p class="mb-4">Embracing advancements within the industry, we continually
                                 offer cutting-edge materials and innovative solutions.
                             </p>
@@ -546,10 +502,7 @@
                             <a href="#" class="h4 mb-0 p-4 ">INTEGRITY</a>
                         </div>
                         <div class="blog-content bg-light p-4 bg-dark">
-                            <!-- <div class="d-flex justify-content-between mb-4">
-                                <p class="mb-0 small"><i class="fa fa-calendar me-2"></i> April 2,2025</p>
-                                <p class="mb-0 small"><i class="fa fa-tag me-2"></i> Electricity Corner</p>
-                            </div> -->
+                           
                             <p class="mb-4">Our business ethos is built upon principles of honesty and
                                 transparency, ensuring trust with our esteemed clients and
                                 partners
@@ -565,10 +518,7 @@
                             <a href="#" class="h4 mb-0 p-4">CUSTOMER FOCUS</a>
                         </div>
                         <div class="blog-content bg-light p-4 bg-dark">
-                            <!-- <div class="d-flex justify-content-between mb-4">
-                                <p class="mb-0 small"><i class="fa fa-calendar me-2"></i> April 2,2025</p>
-                                <p class="mb-0 small"><i class="fa fa-tag me-2"></i> Electricity Corner</p>
-                            </div> -->
+                          
                             <p class="mb-4">Your satisfaction is our foremost priority. We consistently go the
 extra mile to meet and exceed your expectations.
                             </p>
@@ -582,7 +532,7 @@ extra mile to meet and exceed your expectations.
                
             </div>
         </div>
-     </div>
+     </div> -->
         <!-- Services Start -->
         <!-- Projects End -->
 
@@ -596,14 +546,15 @@ extra mile to meet and exceed your expectations.
                     <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, deserunt provident ab voluptates rerum eaque eum magni autem atque in minus laboriosam corrupti deleniti voluptatibus rem reiciendis modi veniam animi?
                     </p> -->
                 </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="row g-4  product-item">
+                    <div class="col-lg-4 wow fadeInUp "  data-wow-delay="0.2s" data-type="PIPING SOLUTIONS">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/images (1).jpeg " class="img-fluid w-100 img" alt="">
+                                <img src="https://img.freepik.com/free-photo/minimalist-construction-pvc-pipes-composition_23-2149106870.jpg?t=st=1728981457~exp=1728985057~hmac=be591f0f80cf3a4ba526ee25b5f94b0d00571c7a6c58970ce22b33f794f9b937&w=900" class="img-fluid w-100 img" alt="">
                             </div>
                             <div class="blog-heading ms-4">
-                                <a href="#" class="h4 mb-0 p-4">PIPING SOLUTIONS</a>
+                                <a href="products.html?type=Pipes" class="h4 mb-0 p-4 btn" id="btn" type="PIPING SOLUTIONS">Pipes & Fittings</a>
+                                
                             </div>
                             <div class="blog-content bg-light p-4">
                                 <!-- <div class="d-flex justify-content-between mb-4">
@@ -616,16 +567,17 @@ extra mile to meet and exceed your expectations.
                                     plumbing needs.
                                 </p>
                                 <a class="btn btn-primary py-2 px-4" href="#">Learn More</a>
-                            </div>
+
+                                                        </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="col-lg-4 wow fadeInUp product-item"  data-type="OTHER TYPE" data-wow-delay="0.4s" >
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/images (2).jpeg " class="img-fluid w-100 img" alt="">
+                                <img src="https://img.freepik.com/free-vector/modern-toilet-room-interior_1441-3046.jpg?t=st=1728981567~exp=1728985167~hmac=df5c24c0c40156a47a64bd9986a4b3ad69e2978b04f5e4cf90b657e2be32cb57&w=826" class="img-fluid w-100 img" alt="">
                             </div>
                             <div class="blog-heading ms-4">
-                                <a href="#" class="h4 mb-0 p-4">SANITARY WARE </a>
+                                <a href="products.html?type=Sanitary Ware" class="h4 mb-0 p-4 btn" type="PIPING SOLUTIONS">SANITARY WARE </a>
                             </div>
                             <!-- <div class="blog-content bg-light p-4">
                                 <div class="d-flex justify-content-between mb-4">
@@ -642,13 +594,13 @@ extra mile to meet and exceed your expectations.
                             </div>
                         </div>
                     
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="col-lg-4 wow fadeInUp product-item" data-type="ELECTRICALS" data-wow-delay="0.6s">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/images (3).jpeg " class="img-fluid w-100 img" alt="">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJMwj2kQQDbuOgXKmbRt1eHNx4JfBrHcD6rw&s " class="img-fluid w-100 img" alt="">
                             </div>
                             <div class="blog-heading ms-4">
-                                <a href="#" class="h4 mb-0 p-4">ELECTRICALS & LIGHTING PRODUCTS:</a>
+                                <a href="products.html?type=Waterproofing Products" class="h4 mb-0 p-4 btn">Waterproofing Products</a>
                             </div>
                             <div class="blog-content bg-light p-4">
                                 <!-- <div class="d-flex justify-content-between mb-4">
@@ -665,13 +617,13 @@ extra mile to meet and exceed your expectations.
                         </div>
                     </div>
 
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="col-lg-4 wow fadeInUp product-item" data-type="CERAMIC TILES" data-wow-delay="0.6s">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/images (5).jpeg " class="img-fluid w-100 img" alt="">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJt5vT8-8RNAT-0LayvwS4xxlKauxyHHg0lg&s" class="img-fluid w-100 img" alt="">
                             </div>
                             <div class="blog-heading ms-4">
-                                <a href="#" class="h4 mb-0 p-4">CERAMIC TILES</a>
+                                <a href="products.html?type=Nails" class="h4 mb-0 p-4">Nails & Wires</a>
                             </div>
                             <div class="blog-content bg-light p-4">
                                 <!-- <div class="d-flex justify-content-between mb-4">
@@ -686,13 +638,13 @@ extra mile to meet and exceed your expectations.
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="col-lg-4 wow fadeInUp product-item"data-type="DOORS & WINDOW" data-wow-delay="0.6s">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/images (6).jpeg" class="img-fluid w-100 img" alt="">
+                                <img src="https://dsuj2mkiosyd2.cloudfront.net/unified-gallery/210720/7335/2f815a57/9.jpg?t=1626756685" class="img-fluid w-100 img" alt="">
                             </div>
                             <div class="blog-heading ms-4">
-                                <a href="#" class="h4 mb-0 p-4">DOORS & WINDOWS</a>
+                                <a href="products.html?type=Doors" class="h4 mb-0 p-4">Exterior & Interior Doors</a>
                             </div>
                             <div class="blog-content bg-light p-4">
                                 <!-- <div class="d-flex justify-content-between mb-4">
@@ -707,13 +659,13 @@ extra mile to meet and exceed your expectations.
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="col-lg-4 wow fadeInUp product-item" data-type="TOOLS & HARDWARE" data-wow-delay="0.6s">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/images (7).jpeg" class="img-fluid w-100 img" alt="">
+                                <img src="data:image/jpeg;base64,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" class="img-fluid w-100 img" alt="">
                             </div>
                             <div class="blog-heading ms-4">
-                                <a href="#" class="h4 mb-0 p-4">TOOLS & HARDWARE</a>
+                                <a href="products.html?type=Wood" class="h4 mb-0 p-4">Wood</a>
                             </div>
                             <div class="blog-content bg-light p-4">
                                 <!-- <div class="d-flex justify-content-between mb-4">
@@ -729,13 +681,13 @@ extra mile to meet and exceed your expectations.
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="col-lg-4 wow fadeInUp product-item" data-type="WIRE MESH" data-wow-delay="0.6s">
                         <div class="blog-item">
                             <div class="blog-img">
                                 <img src="img/images (8).jpeg" class="img-fluid w-100 img" alt="">
                             </div>
                             <div class="blog-heading ms-4">
-                                <a href="#" class="h4 mb-0 p-4">WIRE MESH</a>
+                                <a href="products.html?type=Gypsum Products" class="h4 mb-0 p-4">Gypsum Products</a>
                             </div>
                             <div class="blog-content bg-light p-4">
                                 <!-- <div class="d-flex justify-content-between mb-4">
@@ -751,13 +703,13 @@ extra mile to meet and exceed your expectations.
                         </div>
                     </div>
 
-                    <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="col-lg-4 wow fadeInUp product-item" data-type="PLYWOOD" data-wow-delay="0.6s">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="img/images (7).jpeg" class="img-fluid w-100 img" alt="">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6LrSw3vR9chTKfG0mrHZZYPmL6Sj1HZMOng&s" class="img-fluid w-100 img" alt="">
                             </div>
                             <div class="blog-heading ms-4">
-                                <a href="#" class="h4 mb-0 p-4">PLYWOOD</a>
+                                <a href="products.html?type=Other Specialized Products " class="h4 mb-0 p-4">Other Specialized Products</a>
                             </div>
                             <div class="blog-content bg-light p-4">
                                 <!-- <div class="d-flex justify-content-between mb-4">
@@ -978,9 +930,15 @@ extra mile to meet and exceed your expectations.
         <script src="lib/waypoints/waypoints.min.js"></script>
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
         
-
+        <script>
+            function navigateToProducts(type) {
+                window.location.href = `products.html?type=${encodeURIComponent(type)}`;
+            }
+        </script>
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script src="products.js"></script>
+
     </body>
 
 </html>
