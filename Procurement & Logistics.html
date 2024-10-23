@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <title>SBM</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Edu+TAS+Beginner:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    <style>
+        .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding: 50px 20px; */
+    text-align: center;
+}
+
+.procurement-logistics {
+    /* background: linear-gradient(to right, #11232f, #ffbd00); */
+    padding: 100px 0;
+    color: white;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    animation: slideInDown 1s ease-in-out;
+margin-top: -20px;}
+
+
+.intro {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.service-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service {
+    background-color: white;
+    color: #11232f;
+    width: 45%;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    font-size: 50px;
+    color: #ffbd00;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.learn-more {
+    text-decoration: none;
+    font-weight: 600;
+    color: #ffbd00;
+    transition: color 0.3s ease;
+    margin-top: 20px;
+}
+
+.learn-more:hover {
+    color: #11232f;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }}
+
+@media (max-width: 768px) {
+    .service-box {
+        flex-direction: column;
+    }
+
+    .service {
+        width: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+     <!-- Navbar & Hero Start -->
+     <div class="container-fluid header-top">
+        <div class="container d-flex align-items-center">
+            <div class="d-flex align-items-center h-100">
+                <a href="#" class="navbar-brand" style="height: 125px;">
+                    <h1 class="text-primary mb-0">                      
+                          <img src="img/logo.jpeg " class="logoo" alt="Logo">
+                    </h1>
+                    <!-- <img src="img/logo.jpeg" alt="Logo"> -->
+                </a>
+            </div>
+            <div class="w-100 h-100">
+                <div class="topbar px-0 py-2 d-none d-lg-block" style="height: 45px;">
+                    <div class="row gx-0 align-items-center">
+                        <div class="col-lg-8 text-center text-lg-center mb-lg-0">
+                            <div class="d-flex flex-wrap">
+                                <div class="border-end border-primary pe-3">
+                                    <a href="https://www.google.com/maps/search/?api=1&query=GOLADA+SARE,+JIGJIGA+YAR,+HARGEISA,+SOMALILAND" 
+target="_blank" 
+class="text-muted small">
+<i class="fas fa-map-marker-alt text-primary me-2"></i>
+Find A Location
+</a>                                   </div>
+                                <div class="ps-3">
+                                    <a href="mailto:example@gmail.com" class="text-muted small"><i class="fas fa-envelope text-primary me-2"></i>info@sabahmaterials.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 text-center text-lg-end">
+                            <div class="d-flex justify-content-end">
+                                <div class="d-flex border-end border-primary pe-3">
+                                    <a class="btn p-0 text-primary me-3" href="https://www.facebook.com/sabahbmltd?paipv=0&eav=AfYU6W5jouUlcPU58zbZ5Iem8lYQt04Vkf2dqKkarPWutGn3BoT6KpuNU7LMpUCwQis&_rdr"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn p-0 text-primary me-3" href="#"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn p-0 text-primary me-3" href="https://www.instagram.com/sabahbmltd"><i class="fab fa-instagram"></i></a>
+                                    <a class="btn p-0 text-primary me-0" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-bar px-0 py-lg-0" style="height: 80px;">
+                    <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-lg-end">
+                        <a href="#" class="navbar-brand-2">
+                            <h1 class="text-primary mb-0"></i> SBM</h1>
+                        </a>  
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="fa fa-bars"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarCollapse">
+                            <div class="navbar-nav mx-0 mx-lg-auto bg-white navbar1">
+                                <a href="index.html" class="nav-item nav-link active">Home</a>
+                                <div class="nav-item dropdown">
+                                    <a href="#About" class="nav-link" data-bs-toggle="dropdown">
+                                        <span class="dropdown-toggle">About</span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a href="Vision.html" class="dropdown-item">Vision & Mission</a>
+                                        <a href="WHAT WE DO.html" class="dropdown-item">WHAT WE DO</a>
+                                       
+                                    </div>
+                                </div>
+                                <a href="Allproducts.html" class="nav-item nav-link">Products</a>
+
+                                <div class="nav-item dropdown">
+                                    <a href="Services.html" class="nav-link" data-bs-toggle="dropdown">
+                                        <span class="dropdown-toggle">Services</span>
+                                    </a>
+                                    <div class="dropdown-menu">
+                                        <a href="Procurement & Logistics.html" class="dropdown-item">procurmenet & logistics</a>
+                                        <a href="why choose us.html" class="dropdown-item">why choose us</a>
+
+                                       
+                                    </div>
+                                </div>
+
+
+                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                               
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar & Hero End --> 
+     <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Procurement & Logistics</h4>
+                <ol class="breadcrumb d-flex justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active text-primary">Procurement & Logistics</li>
+                </ol>    
+            </div>
+        </div>
+    <section class="procurement-logistics">
+       
+        <div class="container">
+            
+
+            <div class="service-box">
+                <div class="service">
+                    <div class="icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h2>Procurement Services</h2>
+                    <p>Our procurement team ensures that every product we source meets the highest standards and is available at the best possible prices.</p>
+                </div>
+                <div class="service">
+                    <div class="icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h2>Logistics Solutions</h2>
+                    <p>From warehousing to timely deliveries, our logistics team guarantees efficient transportation of materials to your site.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
