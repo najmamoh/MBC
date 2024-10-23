@@ -415,7 +415,7 @@
 }
 
 .hero-bg-half-2 {
-    background-image: url(../img/IMG1.jpeg);
+    /* background-image: url(../img/IMG1.jpeg); */
     clip-path: polygon(37% 0%, 100% 0%, 100% 100%, 0% 100%);
     filter: grayscale(10%);
     transform: scale(100% - 50%);
