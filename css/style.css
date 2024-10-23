@@ -388,7 +388,7 @@
 
 /*** Carousel Hero Header Start ***/
 .hero-section {
-    background-image: url('https://dsuj2mkiosyd2.cloudfront.net/unified-gallery/210720/7335/2f815a57/9.jpg?t=1626756685');
+    background-image: url(../img/1.jpeg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -400,7 +400,7 @@
 }
 
 .hero-bg-half-1 {
-    background-image: url('https://img.freepik.com/free-vector/modern-toilet-room-interior_1441-3046.jpg?t=st=1728981567~exp=1728985167~hmac=df5c24c0c40156a47a64bd9986a4b3ad69e2978b04f5e4cf90b657e2be32cb57&w=826');
+    /* background-image: url('https://img.freepik.com/free-vector/modern-toilet-room-interior_1441-3046.jpg?t=st=1728981567~exp=1728985167~hmac=df5c24c0c40156a47a64bd9986a4b3ad69e2978b04f5e4cf90b657e2be32cb57&w=826'); */
     clip-path: polygon(37% 0%, 100% 0%, 100% 100%, 0% 100%);
     filter: grayscale(10%);
     transform: scale(100% - 50%);
@@ -1011,7 +1011,7 @@
 
 
 .heading{
-    color: #ffbd00;
+    color: var(--bs-dark);
 }
 
 .icon{
