@@ -388,7 +388,7 @@
 
 /*** Carousel Hero Header Start ***/
 .hero-section {
-    background-image: url(../img/1.jpeg);
+    background-image: url('../img/1.jpeg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
